@@ -30,44 +30,63 @@ struct AlbumView: View {
      **/
     
     var body: some View {
-         // Viewを重ねて表示
-        ZStack {
-            // Viewをグループ化
+        VStack(alignment: .leading) {
+            // Viewを重ねて表示
+           ZStack {
+               // Viewをグループ化
+               Group {
+                   // 画像のファイルパスが設定されている場合
+                   if self.path.count > 0 {
+                       
+                       // プロパティ値であるself.pathで画像のファイルパスを設定
+                       Image(uiImage: UIImage.init(contentsOfFile: self.path)!)
+                           // オリジナル画像を表示
+                           .renderingMode(.original)
+                           // 横幅、高さ、表示位置
+                           .frame(width: 100, height: 100, alignment: .center)
+                       
+                   } else {
+                       // ファイルパスが設定されていない場合
+                       // iOSで使用できるシステムアイコン(四角)を表示
+                       Image(systemName: "square.on.square")
+                           .renderingMode(.original)
+                           .frame(width: 100, height: 100, alignment: .center)
+                   }
+                   
+                   // お気に入りの場合
+                   if self.isFavorite == true {
+                       // ハートを表示
+                       Image(systemName: "heart.fill")
+                           // 左下に表示
+                           .frame(width: 100, height: 100, alignment: .bottomLeading)
+                           // ピンク
+                           .foregroundColor(.pink)
+                   }
+               }
+               // グループ内の要素(ビュー)に余白を追加
+               .padding()
+               .border(Color.gray, width: 1) // 枠線をグレーに設定
+           }
+           // ZStack内のビューを角丸
+           .cornerRadius(10)
+            
+            // 名称
+            Text(self.name)
+                .foregroundColor(.primary)
+            
+            // 画像数 (後の章で変更します)
             Group {
-                // 画像のファイルパスが設定されている場合
-                if self.path.count > 0 {
-                    
-                    // プロパティ値であるself.pathで画像のファイルパスを設定
-                    Image(uiImage: UIImage.init(contentsOfFile: self.path)!)
-                        // オリジナル画像を表示
-                        .renderingMode(.original)
-                        // 横幅、高さ、表示位置
-                        .frame(width: 100, height: 100, alignment: .center)
-                    
-                } else {
-                    // ファイルパスが設定されていない場合
-                    // iOSで使用できるシステムアイコン(四角)を表示
-                    Image(systemName: "square.on.square")
-                        .renderingMode(.original)
-                        .frame(width: 100, height: 100, alignment: .center)
-                }
-                
-                // お気に入りの場合
                 if self.isFavorite == true {
-                    // ハートを表示
-                    Image(systemName: "heart.fill")
-                        // 左下に表示
-                        .frame(width: 100, height: 100, alignment: .bottomLeading)
-                        // ピンク
-                        .foregroundColor(.pink)
+                    Text("0")
+                } else {
+                    Text("0")
                 }
             }
-            // グループ内の要素(ビュー)に余白を追加
-            .padding()
-            .border(Color.gray, width: 1) // 枠線をグレーに設定
+            .foregroundColor(.primary)
         }
-        // ZStack内のビューを角丸
-        .cornerRadius(10)
+        
+        
+        
     }
 }
 
