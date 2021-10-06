@@ -9,6 +9,8 @@ import SwiftUI
 
 struct AlbumView: View {
     
+    @EnvironmentObject private var userData: UserData
+    
     /*
      * 状態部分
      **/
@@ -79,7 +81,7 @@ struct AlbumView: View {
                 if self.isFavorite == true {
                     Text("0")
                 } else {
-                    Text("0")
+                    Text(String(self.userData.images.count))
                 }
             }
             .foregroundColor(.primary)
@@ -95,7 +97,7 @@ struct AlbumView_Previews: PreviewProvider {
         AlbumView(
             name: "お気に入り",
             path: "",
-            isFavorite: true
+            isFavorite: true).environmentObject(UserData()
         )
     }
 }
