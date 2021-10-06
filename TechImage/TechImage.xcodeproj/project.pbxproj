@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B6278E3F270D813B00D02513 /* ImageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6278E3E270D813B00D02513 /* ImageData.swift */; };
+		B6278E41270D815100D02513 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6278E40270D815100D02513 /* UserData.swift */; };
 		B66922C4270C47F600FB3FA4 /* TechImageApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66922C3270C47F600FB3FA4 /* TechImageApp.swift */; };
 		B66922C8270C47F700FB3FA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B66922C7270C47F700FB3FA4 /* Assets.xcassets */; };
 		B66922CB270C47F700FB3FA4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B66922CA270C47F700FB3FA4 /* Preview Assets.xcassets */; };
@@ -15,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B6278E3E270D813B00D02513 /* ImageData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageData.swift; sourceTree = "<group>"; };
+		B6278E40270D815100D02513 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		B66922C0270C47F600FB3FA4 /* TechImage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TechImage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B66922C3270C47F600FB3FA4 /* TechImageApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechImageApp.swift; sourceTree = "<group>"; };
 		B66922C7270C47F700FB3FA4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -35,6 +39,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B6278E3D270D811D00D02513 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B6278E3E270D813B00D02513 /* ImageData.swift */,
+				B6278E40270D815100D02513 /* UserData.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		B66922B7270C47F600FB3FA4 = {
 			isa = PBXGroup;
 			children = (
@@ -54,6 +67,7 @@
 		B66922C2270C47F600FB3FA4 /* TechImage */ = {
 			isa = PBXGroup;
 			children = (
+				B6278E3D270D811D00D02513 /* Models */,
 				B66922D4270C89D200FB3FA4 /* Supporting Views */,
 				B66922C3270C47F600FB3FA4 /* TechImageApp.swift */,
 				B66922D2270C875000FB3FA4 /* Album.swift */,
@@ -152,6 +166,8 @@
 				B66922D6270C89E700FB3FA4 /* AlbumView.swift in Sources */,
 				B66922C4270C47F600FB3FA4 /* TechImageApp.swift in Sources */,
 				B66922D3270C875000FB3FA4 /* Album.swift in Sources */,
+				B6278E41270D815100D02513 /* UserData.swift in Sources */,
+				B6278E3F270D813B00D02513 /* ImageData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,6 +297,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"TechImage/Preview Content\"";
+				DEVELOPMENT_TEAM = 5GWH68FSCH;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = TechImage/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -288,7 +305,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.techimage.test.TechImage;
+				PRODUCT_BUNDLE_IDENTIFIER = "responsibility1129.Swift-Beginners.TechImage";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -302,6 +319,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"TechImage/Preview Content\"";
+				DEVELOPMENT_TEAM = 5GWH68FSCH;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = TechImage/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -309,7 +327,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.techimage.test.TechImage;
+				PRODUCT_BUNDLE_IDENTIFIER = "responsibility1129.Swift-Beginners.TechImage";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
